@@ -33,3 +33,7 @@ node_modules
 # Vagrant
 bin
 .vagrant
+
+
+!web/app/plugins/simple-share-buttons-adder
+

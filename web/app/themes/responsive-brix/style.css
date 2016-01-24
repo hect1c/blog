@@ -3153,3 +3153,19 @@ div.wpcf7-validation-errors {
 .comments-link {
   text-align: center;
 }
+
+.more-link {
+  margin: 0 auto;
+  padding: 5px;
+  padding-left: 15px;
+  width: 17%;
+  border: 1px solid #eaeaea;
+}
+
+.ssba {
+  float: right;
+}
+
+.entry-grid {
+  border-bottom: 2px solid black !important;
+}
