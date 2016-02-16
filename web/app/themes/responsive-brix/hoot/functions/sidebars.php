@@ -1,6 +1,6 @@
 <?php
 /**
- * Helper functions for working with the WordPress sidebar system.  Currently, the framework creates a 
+ * Helper functions for working with the WordPress sidebar system.  Currently, the framework creates a
  * simple function for registering HTML5-ready sidebars instead of the default WordPress unordered lists.
  *
  * @package hoot
@@ -9,9 +9,9 @@
  */
 
 /**
- * Wrapper function for WordPress' register_sidebar() function.  This function exists so that theme authors 
- * can more quickly register sidebars with an HTML5 structure instead of having to write the same code 
- * over and over.  Theme authors are also expected to pass in the ID, name, and description of the sidebar. 
+ * Wrapper function for WordPress' register_sidebar() function.  This function exists so that theme authors
+ * can more quickly register sidebars with an HTML5 structure instead of having to write the same code
+ * over and over.  Theme authors are also expected to pass in the ID, name, and description of the sidebar.
  * This function can handle the rest at that point.
  *
  * @since 1.0.0
@@ -28,8 +28,8 @@ function hoot_register_sidebar( $args ) {
 		'description'   => '',
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>'
+		'before_title'  => '<h3 class="widget-title"><span class="widget-header">',
+		'after_title'   => '</span></h3>'
 	);
 
 	/* Allow developers to filter the default sidebar arguments. */

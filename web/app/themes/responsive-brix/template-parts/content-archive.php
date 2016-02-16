@@ -22,7 +22,7 @@
 			<?php endif; ?>
 
 			<?php $img_size = apply_filters( 'hoot_post_image_archive_big', '' );
-			hoot_post_thumbnail( 'entry-content-featured-img entry-grid-featured-img', $img_size ); ?>
+			hoot_post_thumbnail( 'entry-content-featured-img entry-grid-featured-img', '1' ); ?>
 
 			<div <?php hoot_attr( 'entry-summary' ); ?>>
 				<?php
@@ -30,14 +30,17 @@
 					the_content();
 				else
 					the_excerpt();
+					echo do_shortcode('[ssba]');
 				?>
 			</div><!-- .entry-summary -->
 
-			<div <?php hoot_attr( 'entry-post-meta'); ?>>
-				<?php
-					mb_entry_post_meta();
-				?>
-			</div>
+			<!-- <div <?php hoot_attr( 'bottom-blog'); ?>> -->
+				<div <?php hoot_attr( 'entry-time-auth'); ?>>
+					<?php
+						mb_entry_date_auth();
+					?>
+				</div>
+			<!-- </div> -->
 
 		</div><!-- .entry-grid-content -->
 

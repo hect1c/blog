@@ -4,10 +4,11 @@ $site_info = str_replace( "<!--year-->" , date_i18n( 'Y' ) , $site_info );
 if ( !empty( $site_info ) ) :
 ?>
 	<div id="post-footer" class="grid-stretch highlight-typo linkstyle">
+		<?php echo do_shortcode( '[instagram-feed]' ); ?>
 		<div class="grid">
 			<div class="grid-row">
 				<div class="grid-span-12">
-					<p class="credit small">
+					<p class="credit big">
 						<?php
 						if ( trim( $site_info ) == '<!--default-->' ) {
 							printf(

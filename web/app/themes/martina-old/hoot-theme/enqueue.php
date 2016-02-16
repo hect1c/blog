@@ -82,9 +82,9 @@ function hoot_base_enqueue_styles() {
 	$suffix = hoot_get_min_suffix();
 
 	/* Load Google Fonts if 'google-fonts' is active. */
-	if ( current_theme_supports( 'google-fonts' ) ) {
+	// if ( current_theme_supports( 'google-fonts' ) ) {
 		wp_enqueue_style( 'hoot-google-fonts', hoot_google_fonts_enqueue_url(), array(), null );
-	}
+	// }
 
 	/* Load lightSlider style if 'light-slider' is active. */
 	if ( current_theme_supports( 'light-slider' ) ) {
@@ -103,9 +103,9 @@ function hoot_base_enqueue_styles() {
 	}
 
 	/* Load font awesome if 'font-awesome' is active. */
-	if ( current_theme_supports( 'font-awesome' ) ) {
+	// if ( current_theme_supports( 'font-awesome' ) ) {
 		wp_enqueue_style( 'font-awesome', trailingslashit( HOOT_CSS ) . "font-awesome{$suffix}.css", false, '4.2.0' );
-	}
+	// }
 
 }
 

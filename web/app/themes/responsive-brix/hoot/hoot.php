@@ -18,13 +18,13 @@ if ( ! defined( 'HOOT_VERSION' ) )
 
 /**
  * The Hoot class launches the framework.  It's the organizational structure and should be
- * loaded and initialized before anything else within the theme is called.  
+ * loaded and initialized before anything else within the theme is called.
  *
- * After calling the Hoot class, parent themes should perform a theme setup function on the 
+ * After calling the Hoot class, parent themes should perform a theme setup function on the
  * 'after_setup_theme' hook with a priority of 10.  Child themes can add theme setup function
  * with a priority of 11. This allows the class to load theme-supported features on the
  * 'after_setup_theme' hook with a priority of 12.
- * 
+ *
  * @since 1.0.0
  * @access public
  */
@@ -32,7 +32,7 @@ if ( !class_exists( 'Hoot' ) ) {
 	class Hoot {
 
 		/**
-		 * Constructor method to controls the load order of the required files for running 
+		 * Constructor method to controls the load order of the required files for running
 		 * the framework.
 		 *
 		 * @since 1.0.0
@@ -74,8 +74,8 @@ if ( !class_exists( 'Hoot' ) ) {
 		}
 
 		/**
-		 * Defines the constant paths for use within the core framework, parent theme, and child theme.  
-		 * Constants prefixed with 'HOOT' are for use only within the core framework and don't 
+		 * Defines the constant paths for use within the core framework, parent theme, and child theme.
+		 * Constants prefixed with 'HOOT' are for use only within the core framework and don't
 		 * reference other areas of the parent or child theme.
 		 *
 		 * @since 1.0.0
@@ -163,8 +163,8 @@ if ( !class_exists( 'Hoot' ) ) {
 		}
 
 		/**
-		 * Loads the core framework files. These files are needed before loading anything else in the 
-		 * framework because they have required functions for use. Many of the files run filters that 
+		 * Loads the core framework files. These files are needed before loading anything else in the
+		 * framework because they have required functions for use. Many of the files run filters that
 		 * may be removed in theme setup functions.
 		 *
 		 * @since 1.0.0
@@ -263,7 +263,7 @@ if ( !class_exists( 'Hoot' ) ) {
 		}
 
 		/**
-		 * Loads the framework files supported by themes and template-related functions/classes.  Functionality 
+		 * Loads the framework files supported by themes and template-related functions/classes.  Functionality
 		 * in these files should not be expected within the theme setup function.
 		 *
 		 * @since 1.0.0
@@ -302,9 +302,9 @@ if ( !class_exists( 'Hoot' ) ) {
 		}
 
 		/**
-		 * Load extensions (external projects).  Extensions are projects that are included within the 
-		 * framework but are not a part of it.  They are external projects developed outside of the 
-		 * framework.  Themes must use add_theme_support( $extension ) to use a specific extension 
+		 * Load extensions (external projects).  Extensions are projects that are included within the
+		 * framework but are not a part of it.  They are external projects developed outside of the
+		 * framework.  Themes must use add_theme_support( $extension ) to use a specific extension
 		 * within the theme.  This should be declared on 'after_setup_theme' no later than a priority of 11.
 		 *
 		 * @since 1.0.0
@@ -343,9 +343,9 @@ if ( !class_exists( 'Hoot' ) ) {
 
 		/**
 		 * Loads both the parent and child theme translation files.  If a locale-based functions file exists
-		 * in either the parent or child theme (child overrides parent), it will also be loaded.  All translation 
-		 * and locale functions files are expected to be within the theme's '/languages' folder, but the 
-		 * framework will fall back on the theme root folder if necessary.  Translation files are expected 
+		 * in either the parent or child theme (child overrides parent), it will also be loaded.  All translation
+		 * and locale functions files are expected to be within the theme's '/languages' folder, but the
+		 * framework will fall back on the theme root folder if necessary.  Translation files are expected
 		 * to be prefixed with the template or stylesheet path (example: 'templatename-en_US.mo').
 		 *
 		 * @since 1.0.0

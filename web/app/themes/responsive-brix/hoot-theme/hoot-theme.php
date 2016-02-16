@@ -173,7 +173,7 @@ if ( !class_exists( 'Hoot_Theme' ) ) {
 		 */
 		function conditional_theme_setup() {
 
-			/* Enable Light Slider if its the 'Widgetized Template' */
+			/* Enable Slick Slider */
 			add_theme_support( 'slick-slider' );
 
 		}
@@ -202,7 +202,7 @@ if ( !class_exists( 'Hoot_Theme' ) ) {
 			$read_more = hoot_get_option('read_more');
 			$read_more = ( empty( $read_more ) ) ? sprintf( __( 'Read More %s', 'responsive-brix' ), '&rarr;' ) : $read_more;
 			global $post;
-			$read_more = '<a class="more-link" href="' . get_permalink( $post->ID ) . '">' . $read_more . '</a>';
+			$read_more = '<div class="more-link-wrap"><a class="more-link" href="' . get_permalink( $post->ID ) . '">' . $read_more . '</a></div>';
 			return apply_filters( 'hoot_readmore', $read_more ) ;
 		}
 

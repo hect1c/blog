@@ -14,7 +14,7 @@ if ( !is_front_page() && !is_singular() && !hoot_is_404() ) :
 
 				<div <?php hoot_attr( 'loop-meta', '', 'grid-span-12' ); ?>>
 
-					<h1 <?php hoot_attr( 'loop-title' ); ?>><?php hoot_loop_title(); // Displays title for archive type (multi post) pages. ?></h1>
+					<h3 <?php hoot_attr( 'loop-title','','grid-span-9' ); ?>><span class="cat-title">Browsing:</span> <?php hoot_loop_title(); // Displays title for archive type (multi post) pages. ?></h3>
 
 					<?php if ( $desc = hoot_get_loop_description() ) : ?>
 						<div <?php hoot_attr( 'loop-description' ); ?>>

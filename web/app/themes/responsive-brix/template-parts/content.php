@@ -68,10 +68,14 @@ if ( is_singular( get_post_type() ) ) :
  */
 else :
 
-	$archive_type = 'big';
+	$archive_type = get_post_type();
 
-	// Loads the template-parts/content-archive-{type}.php template.
-	get_template_part( 'template-parts/content-archive', $archive_type );
+	if( is_category() ){
+		get_template_part( 'template-parts/content-archive-category', $archive_type );
+	} else {
+		// Loads the template-parts/content-archive-{type}.php template.
+		get_template_part( 'template-parts/content-archive', $archive_type );
+	}
 
 endif;
 ?>

@@ -35,7 +35,7 @@ if ( is_page() ) :
 
 		<div class="screen-reader-text" itemprop="datePublished" itemtype="https://schema.org/Date"><?php echo get_the_date('Y-m-d'); ?></div>
 
-		<?php 
+		<?php
 		$hide_meta_info = '';
 		$hide_meta_info = apply_filters( 'hoot_hide_meta_info', $hide_meta_info, 'bottom' );
 		?>
@@ -52,8 +52,6 @@ if ( is_page() ) :
  * If not viewing a single page i.e. viewing the page in a list index (Example: search results)
  */
 else :
-
-	global $hoot_theme;
 	if ( empty( $hoot_theme->searchresults_hide_pages ) ) {
 
 		$archive_type = 'big';

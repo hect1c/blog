@@ -59,14 +59,22 @@ function hoot_custom_css() {
 		hoot_css_rule( 'color', $accent_color )
 	);
 
-	$cssrules['.entry-date-cat a:hover'] = array(
+	$cssrules['.entry-cat a:hover'] = array(
+		hoot_css_rule( 'color', $accent_color )
+	);
+
+	$cssrules['.entry-title a:hover'] = array(
+		hoot_css_rule( 'color', $accent_color )
+	);
+
+	$cssrules['.more-link-wrap a:hover'] = array(
 		hoot_css_rule( 'color', $accent_color )
 	);
 
 	// Override @headingsFontFamily if selected in options
 	if ( 'cursive' != hoot_get_option( 'headings_fontface' ) ) {
 		$cssrules['h1, h2, h3, h4, h5, h6, .title, .titlefont'] = array(
-			hoot_css_rule( 'font-family', '"Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif' ),
+			hoot_css_rule( 'font-family', 'Raleway', '"Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif' ),
 			hoot_css_rule( 'font-weight', '300' ),
 			hoot_css_rule( 'color', '#000000' ),
 			);

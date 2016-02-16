@@ -17,6 +17,8 @@ add_filter( 'hoot_attr_sidebar', 'hoot_theme_attr_sidebar', 10, 2 );
 add_filter( 'hoot_attr_page_wrapper', 'hoot_theme_attr_page_wrapper' );
 add_filter( 'hoot_attr_page_template_content', 'hoot_theme_page_template_content', 10, 2 );
 
+add_filter( 'excerpt_length', 'mb_custom_excerpt_length', 10, 1 );
+
 /**
  * Modify Main content container of the page attributes.
  *
@@ -101,4 +103,10 @@ function hoot_theme_page_template_content( $attr, $context ) {
 	}
 
 	return $attr;
+}
+
+function mb_custom_excerpt_length($length){
+	if ( !empty( $length ) )
+		return $length;
+	return 105;
 }

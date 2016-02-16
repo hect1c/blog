@@ -24,7 +24,7 @@ if ( !empty( $sidebar_size ) ) :
 				array(
 					'before_widget' => '<section class="widget widget_text">',
 					'after_widget'  => '</section>',
-					'before_title'  => '<h3 class="widget-title">',
+					'before_title'  => '<h3 class="widget-title effect7">',
 					'after_title'   => '</h3>'
 				)
 			);

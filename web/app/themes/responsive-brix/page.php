@@ -23,7 +23,7 @@ if ( hoot_page_header_attop() ) {
 					<?php
 					// Dispay Loop Meta in content wrap
 					if ( ! hoot_page_header_attop() ) {
-						get_template_part( 'template-parts/loop-meta' ); // Loads the template-parts/loop-meta.php template to display Title Area with Meta Info (of the loop)
+						//mget_template_part( 'template-parts/loop-meta' ); // Loads the template-parts/loop-meta.php template to display Title Area with Meta Info (of the loop)
 					}
 
 					// Begins the loop through found posts, and load the post data.

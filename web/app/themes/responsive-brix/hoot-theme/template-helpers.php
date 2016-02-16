@@ -107,7 +107,7 @@ function hoot_logo() {
 
 			}
 
-			$display .= '<div class="site-logo-mixed-text">' . 
+			$display .= '<div class="site-logo-mixed-text">' .
 						 apply_filters( 'hoot_site_title', $title ) .
 						 '</div>';
 			$display .= '</a></h1>';

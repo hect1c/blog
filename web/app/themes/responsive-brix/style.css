@@ -53,7 +53,7 @@ Text Domain: responsive-brix
  * ========================================================
  */
 html {
-  font-family: sans-serif;
+  font-family: 'Raleway', sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -778,9 +778,7 @@ h6 a.linkstyle,
 .enforce-typo .title {
   color: #666666;
 }
-.highlight-typo {
-  background: #f6f3ed;
-}
+
 /************* Code, Pre, Keyboard, Teletype *************/
 code,
 pre,
@@ -1388,6 +1386,7 @@ body {
 /************* Topbar *************/
 #topbar {
   color: #aaaaaa;
+  border-bottom: 1px solid #e6e6e6;
 }
 #topbar ul,
 #topbar ol,
@@ -1484,7 +1483,7 @@ body {
 #header {
   background: #ffffff;
   position: relative;
-  border: solid 1px #dddddd;
+  /*border: solid 1px #dddddd;*/
   border-right: none;
   border-left: none;
 }
@@ -1526,7 +1525,7 @@ body {
 }
 /************* Logo *************/
 #site-logo {
-  padding: 15px 23px 13px 0;
+  padding: 35px 23px 13px 0;
   /*min-width: 220px;*/
   /*max-width: 100%;*/
   /*display: inline-block;*/
@@ -1829,18 +1828,18 @@ body {
 }
 /************* Loop Meta *************/
 #loop-meta {
-  background: #f6f3ed;
+  /*background: #f6f3ed;*/
   position: relative;
 }
 .loop-meta {
-  float: none;
+  /*float: none;
   text-align: center;
+  background-size: contain;*/
   background-size: contain;
   padding-top: 45px;
-  padding-bottom: 45px;
 }
 .loop-title {
-  margin: 0;
+  /*margin: 0;*/
 }
 .loop-description p {
   margin: 0.71428571em 0;
@@ -1850,7 +1849,7 @@ body {
 }
 #content-wrap #loop-meta:before {
   position: absolute;
-  background: #f6f3ed;
+  /*background: #f6f3ed;*/
   height: 100%;
   width: 9999px;
   content: " ";
@@ -1858,7 +1857,7 @@ body {
 }
 #content-wrap .loop-meta {
   text-align: left;
-  margin-bottom: 70px;
+  margin-bottom: 30px;
   padding-left: 0;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -1917,7 +1916,8 @@ body {
 }
 /************* <main> #content *************/
 #content {
-  margin-top: 70px;
+  margin-top: 5px;
+  border-right: 1px solid #e6e6e6;
 }
 #content.no-sidebar {
   float: none;
@@ -2181,9 +2181,8 @@ body {
 /* Entry Grid */
 .entry-grid {
   margin-bottom: 70px;
-  padding-bottom: 45.01607717px;
   min-width: inherit;
-  border-bottom: solid 1px #dddddd;
+  border-bottom: solid 3px #dddddd;
 }
 .entry-grid-content {
   padding-left: 0;
@@ -2509,7 +2508,7 @@ body {
 }
 #sidebar-primary .widget-title {
   color: #aaaaaa;
-  font-size: 14px;
+  font-size: 24px;
   font-family: inherit;
   font-weight: bold;
   font-weight: 800;
@@ -3028,12 +3027,10 @@ div.wpcf7-validation-errors {
 /************* Sub Footer *************/
 #sub-footer {
   background: #f6f3ed;
-  border-top: solid 1px #dddddd;
   text-align: center;
 }
 /************* Footer *************/
 .footer {
-  border-top: solid 1px #dddddd;
   padding: 20px 0 10px;
   line-height: 2em;
 }
@@ -3050,12 +3047,8 @@ div.wpcf7-validation-errors {
 }
 /************* Post Footer *************/
 #post-footer {
-  border-top: solid 1px #dddddd;
   text-align: center;
   padding: 10px 0;
-  font-style: italic;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  color: #aaaaaa;
 }
 #post-footer a {
   color: inherit;
@@ -3139,14 +3132,45 @@ div.wpcf7-validation-errors {
 }
 
 .entry-title {
-  font-weight: 500;
+  /*font-weight: 500;*/
+  /*font-size: 44px !important;*/
 }
 
-.entry-date-cat a {
-  color: #999999;
+.archive-category-small .entry-header {
+  text-align: left !important;
 }
 
-.entry-date-cat {
+.entry-cat {
+  text-align: center;
+  font-size: 25px;
+}
+
+.entry-cat em {
+  color: #bbb;
+  font-style: normal;
+}
+
+.entry-cat em:before {
+    width: 80px;
+    height: 8px;
+    background: url(images/cat-border-left.png) 0 1px no-repeat;
+    margin-top: 12px;
+    margin-left: -90px;
+    position: absolute;
+    content: '';
+}
+
+.entry-cat em:after {
+    width: 80px;
+    height: 8px;
+    background: url(images/cat-border-right.png) 0 1px no-repeat;
+    margin-top: 12px;
+    margin-left: 10px;
+    position: absolute;
+    content: '';
+}
+
+.entry-cat a {
   color: #999999;
 }
 
@@ -3154,18 +3178,177 @@ div.wpcf7-validation-errors {
   text-align: center;
 }
 
-.more-link {
-  margin: 0 auto;
-  padding: 5px;
-  padding-left: 15px;
-  width: 17%;
-  border: 1px solid #eaeaea;
+.more-link-wrap {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  font-size: 13px;
+  padding-top: 1.1428571em;
+}
+
+.more-link{
+  position: relative;
+  letter-spacing: 1px;
+  text-align: center;
+  border-bottom: 2px solid #fff;
+  color: #333 !important;
+  font-size: 22px;
+}
+
+.bottom-blog {
+    float: left;
+    width: 100%;
+    padding: 0 30px;
+    margin-left: -30px;
+    background: url(images/brixton-blog-border.png) 2px 0px repeat-x;
 }
 
 .ssba {
+  position: relative;
+  top: 35px;
   float: right;
 }
 
-.entry-grid {
+.entry-time-auth {
+    text-align: center;
+    margin: 40px 0;
+    text-transform: uppercase;
+    font-size: 16px;
+    float: left;
+    height: 47px;
+    line-height: 47px;
+    padding: 0 0px 0 30px;
+    /*margin-left: -30px;*/
+    background: #333;
+}
+
+.entry-summary{
+  padding-bottom: 30px;
+  border-bottom: 2px dashed #e6e6e6;
+}
+
+.entry-date-auth {
+    padding: 0px 3px;
+    color: #fff !important;
+    font-style: normal;
+    border-bottom: 2px solid #333;
+    display: inline;
+}
+
+.entry-time-auth:after {
+    width: 40px;
+    height: 47px;
+    background: url(images/mb-meta-ribbon.png) 0 0 no-repeat;
+    margin-top: 0px;
+    margin-left: 0px;
+    position: relative;
+    float: right;
+    bottom: 0;
+    right: -30px;
+    content: '';
+}
+
+.widget-title {
+  border-bottom: 1px solid #333333;
+  text-align: center;
+}
+
+.widget-where-shop {
+  text-align: center;
+}
+
+span.widget-header {
+  color: #fff;
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 100%;
+  padding: 7px 25px;
+  position: relative;
+  text-transform: uppercase;
+  background: #333333;
+}
+
+span.widget-header:after {
+    content: '';
+    border-style: solid;
+    border-width: 10px 10px 0 10px;
+    margin-left: -10px;
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    border-color: #333333 transparent transparent transparent;
+}
+
+.loop-title {
+    padding: 15px 15px;
+    border: 1px solid #e6e6e6;
+    border-left: 0;
+    border-right: 0;
+    font-weight: 250;
+    color: #f08080;
+}
+
+.cat-title{
+  color: black !important;
+}
+
+.archive-category-small .entry-byline-date {
+  color: #b0b0b0;
+}
+
+.archive-category-small .more-link {
+  text-align: left !important;
+  font-size: 15px !important;
+  bottom: 40px;
+  /*text-transform: capitalize; !important;*/
+}
+
+.archive-category-small .entry-summary {
+  border-bottom: none;
+}
+
+.archive-category-small .more-link:after {
+  content: "...";
+}
+
+.archive-category-small .ssba-link {
+  padding-top: 5px;
+  border-top: 2px dashed #e6e6e6;
+}
+
+.archive-category-small .ssba{
+  /*padding-bottom: 15px;*/
+  position: static !important;
+  float: none !important;
+}
+
+.archive-category-small .ssba img {
+  width: 35px !important;
+}
+
+.archive-category-small .social-links {
+  clear: both;
+  display: block;
+}
+
+.archive-category-small .grid-span-4 {
+  padding: 10px !important;
+}
+
+.archive-category-small .grid-span-8 {
+  padding: 10px !important;
+}
+
+.archive-category-small .entry-grid {
+  margin-bottom: 25px !important;
+}
+
+/*.entry-grid {
   border-bottom: 2px solid black !important;
 }
+
+.entry-grid-content {
+  padding-bottom: 40px;
+  border-bottom: 2px solid black !important;
+}*/
